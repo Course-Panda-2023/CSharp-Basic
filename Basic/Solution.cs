@@ -44,6 +44,7 @@ namespace Basic
 
         public static void Assignment3()
         {
+            
             for (int currNum = 1; currNum <= 1000; currNum++)
             {
                 if (currNum % 3 == 0)
@@ -54,7 +55,7 @@ namespace Basic
                 {
                     Console.WriteLine("FizzBuzz");
                 }
-                if (currNum % 3!=0 && currNum% 5!=0) 
+                if (currNum % 3!= 0 && currNum % 5 != 0) 
                 { 
                     Console.WriteLine(currNum);
                 }
@@ -63,7 +64,7 @@ namespace Basic
 
         public static void Assignment4()
         {
-            const int STIO_CONDITION_FLAG = -1;
+            const int STOP_CONDITION_FLAG = -1;
 
             Console.WriteLine("Enter ultimate assignment number: ");
             int firstNumber = int.Parse(Console.ReadLine());
@@ -71,18 +72,21 @@ namespace Basic
             int currInput = int.Parse(Console.ReadLine());
             Boolean isDivides = true;
 
-            while (currInput != STIO_CONDITION_FLAG)
+            while (currInput != STOP_CONDITION_FLAG)
             {
                 if (currInput % firstNumber != 0)
                 {
-                    isDivides= false;
+                    isDivides = false;
                     Console.WriteLine(isDivides);
                     break;
                 }
                 Console.WriteLine("Enter input to check: ");
                 currInput = int.Parse(Console.ReadLine());
             }
-            if (isDivides) Console.WriteLine(isDivides);
+            if (isDivides)
+            {
+                Console.WriteLine(isDivides);
+            }
         }
     }
 }
