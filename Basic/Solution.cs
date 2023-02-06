@@ -34,6 +34,8 @@ namespace Basic
                 highestGrade = highestGrade < currGrade ? currGrade : highestGrade;
                 lowetGrade = lowetGrade > currGrade ? currGrade : lowetGrade;
                 numOfFails = currGrade < PASS_GRADE ? numOfFails + 1 : numOfFails;
+                Console.WriteLine("please enter a grade: ");
+                currGrade = int.Parse(Console.ReadLine());
             }
             Console.WriteLine($"Grade avarage is: {Math.Round(gradeSum / gradeCounter, 2)} , the highest grade is: {highestGrade}, " +
                 $"and the lowest grade is: {lowetGrade}. the number of fails is: {numOfFails}");
@@ -61,9 +63,20 @@ namespace Basic
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            const int STOP = -1;
+
+            Console.WriteLine("Enter a number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+            int currInput = 0;
+            Boolean isOk = false;
+
+            while (currInput != STOP)
+            {
+                if (currInput % firstNumber != 0)
+                {
+
+                }
+            }
         }
     }
 }
