@@ -2,5 +2,5 @@
 using Basic;
 
 Console.WriteLine("Checking your solutions...");
-Helper.ManageAssignment(1, Solution.Assignment3, "Hello panda!");
+Helper.ManageAssignment(1, Solution.Assignment4, "Hello panda!");
 

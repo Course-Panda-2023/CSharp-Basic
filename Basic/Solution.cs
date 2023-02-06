@@ -84,9 +84,28 @@ namespace Basic
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            string input = Console.ReadLine();
+            if (input is null)
+            {
+                return;
+            }
+            int div = Convert.ToInt32(input);
+            int number = 0;
+            Console.WriteLine("Enter numbers. Press -1 to exit");
+            while (number != -1)
+            {
+                input = Console.ReadLine();
+                if (input is not null)
+                {
+                    number = Convert.ToInt32(input);
+                    if (number % div != 0)
+                    {
+                        Console.WriteLine("false");
+                        return;
+                    }
+                }
+            }
+            Console.WriteLine("true");
         }
     }
 }
