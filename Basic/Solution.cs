@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,23 +11,39 @@ namespace Basic
     {
         public static void Assignment1()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Hello panda!");
         }
 
         public static void Assignment2()
         {
-            /*
-             * Write code here
-             */
+            int score = 0, avg = 0, max = 0;
+            while (score != -1)
+            {
+                score = Console.Read();
+                Console.Write(score);
+            }
+            
         }
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            for (int i = 1; i < 1001; i++)
+            {
+                if (i % 15 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if(i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                
+                else { Console.WriteLine(i); }
+            }
         }
 
         public static void Assignment4()
