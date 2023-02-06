@@ -63,7 +63,7 @@ namespace Basic
 
         public static void Assignment4()
         {
-            const int STOP = -1;
+            const int STIO_CONDITION_FLAG = -1;
 
             Console.WriteLine("Enter ultimate assignment number: ");
             int firstNumber = int.Parse(Console.ReadLine());
@@ -71,7 +71,7 @@ namespace Basic
             int currInput = int.Parse(Console.ReadLine());
             Boolean isDivides = true;
 
-            while (currInput != STOP)
+            while (currInput != STIO_CONDITION_FLAG)
             {
                 if (currInput % firstNumber != 0)
                 {
