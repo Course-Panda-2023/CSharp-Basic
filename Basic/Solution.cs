@@ -21,6 +21,8 @@ namespace Basic
             int numbers = 0;
             int max = int.MinValue;
             int min = int.MaxValue;
+            int FAILURE = 60;
+            int count = 0;
             Console.WriteLine("Enter numbers. Press -1 to exit");
             while (number != -1)
             {
@@ -38,17 +40,19 @@ namespace Basic
                     {
                         min = number;
                     }
+                    if (number < FAILURE && number != -1)
+                    {
+                        ++count;
+                    }
                 }
             }
             double avg = sum / numbers;
-            Console.WriteLine($"The average is {avg}, \nThe maximum is {max}\nThe minimum is {min}");
+            Console.WriteLine($"The average is {avg}, \nThe maximum is {max}\nThe minimum is {min}\nFailure count {count}");
         }
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            //Enumerable.Range(0, 1000).Select(x => x % 3 == 0? x % 5 == 0? : )
         }
 
         public static void Assignment4()
