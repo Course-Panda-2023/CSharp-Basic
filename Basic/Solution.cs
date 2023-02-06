@@ -79,9 +79,21 @@ namespace Basic
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            bool all_divis = true;
+            Console.WriteLine("Enter division number");
+            int divis = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter all numbers, stop with -1");
+            int num = Convert.ToInt32(Console.ReadLine());
+            while(num != -1)
+            {
+                if(num % divis != 0)
+                {
+                    all_divis = false;
+                }
+                num = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine(all_divis);
+            
         }
     }
 }
