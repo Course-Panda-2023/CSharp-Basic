@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\shimo\\.nuget\\packages\\": {}
+    "C:\\Users\\owner\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\Basic.csproj",
+      "projectUniqueName": "D:\\pandaCourse\\CSharp-Basic\\Basic\\Basic.csproj",
       "projectName": "Basic",
-      "projectPath": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\Basic.csproj",
-      "packagesPath": "C:\\Users\\shimo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\obj\\",
+      "projectPath": "D:\\pandaCourse\\CSharp-Basic\\Basic\\Basic.csproj",
+      "packagesPath": "C:\\Users\\owner\\.nuget\\packages\\",
+      "outputPath": "D:\\pandaCourse\\CSharp-Basic\\Basic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
