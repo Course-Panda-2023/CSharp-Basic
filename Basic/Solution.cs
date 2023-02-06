@@ -89,23 +89,27 @@ namespace Basic
             {
                 return;
             }
+            bool isDivide = true;
             int div = Convert.ToInt32(input);
             int number = 0;
             Console.WriteLine("Enter numbers. Press -1 to exit");
             while (number != -1)
             {
                 input = Console.ReadLine();
+                if (!isDivide) 
+                {
+                    continue;
+                }
                 if (input is not null)
                 {
                     number = Convert.ToInt32(input);
                     if (number % div != 0)
                     {
-                        Console.WriteLine("false");
-                        return;
+                        isDivide = false;
                     }
                 }
             }
-            Console.WriteLine("true");
+            Console.WriteLine(isDivide ? "true" : "false");
         }
     }
 }
