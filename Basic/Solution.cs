@@ -26,13 +26,12 @@ namespace Basic
                 Console.WriteLine("enter grade, enter -1 to stop: ");
                 string gradeStr = Console.ReadLine();
                 grade = Convert.ToInt32(gradeStr);
-               
+                if (grade < 60)
+                {
+                    fail += 1;
+                }
                 if (grade >= 0 && grade <= 100)
                 {
-                    if (grade < 60)
-                    {
-                        fail += 1;
-                    }
                     numOfGrades += 1;
                     avg += grade;
                     if (low > grade)
@@ -67,30 +66,21 @@ namespace Basic
         {
             for (int i = 1; i <= 1000; i++)
             {
-                if (i % 3 == 0 && i % 5 != 0)
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else if (i % 3 == 0)
                 {
                     Console.WriteLine("Fizz");
                 }
                 else
                 {
-                    if (i % 5 == 0 && i % 3 != 0)
-                    {
-                        Console.WriteLine("Buzz");
-                    }
-                    else
-                    {
-                        if (i % 3 == 0 && i % 5 == 0)
-                        {
-                            Console.WriteLine("FizzBuzz");
-                        }
-                        else
-                        {
-                            if (i % 3 != 0 && i % 5 != 0)
-                            {
-                                Console.WriteLine(i);
-                            }
-                        }
-                    }
+                    Console.WriteLine(i);
                 }
             }
         }
