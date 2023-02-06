@@ -65,18 +65,24 @@ namespace Basic
         {
             const int STOP = -1;
 
-            Console.WriteLine("Enter a number: ");
+            Console.WriteLine("Enter ultimate assignment number: ");
             int firstNumber = int.Parse(Console.ReadLine());
-            int currInput = 0;
-            Boolean isOk = false;
+            Console.WriteLine("Enter input to check: ");
+            int currInput = int.Parse(Console.ReadLine());
+            Boolean isDivides = true;
 
             while (currInput != STOP)
             {
                 if (currInput % firstNumber != 0)
                 {
-
+                    isDivides= false;
+                    Console.WriteLine(isDivides);
+                    break;
                 }
+                Console.WriteLine("Enter input to check: ");
+                currInput = int.Parse(Console.ReadLine());
             }
+            if (isDivides) Console.WriteLine(isDivides);
         }
     }
 }
