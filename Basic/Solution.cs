@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,9 +73,16 @@ namespace Basic
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            int firstNum = Convert.ToInt32(Console.ReadLine());
+            bool bool1 = true;
+            int num = Convert.ToInt32(Console.ReadLine());
+            while (num != -1 ) 
+            {
+                 if ( num % firstNum != 0)
+                    bool1 = false;
+                 num = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine(bool1);
         }
     }
 }
