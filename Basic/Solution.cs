@@ -10,16 +10,42 @@ namespace Basic
     {
         public static void Assignment1()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Hello Panda");
         }
 
         public static void Assignment2()
         {
-            /*
-             * Write code here
-             */
+            int grade = Convert.ToInt32(Console.ReadLine());
+            int avg = grade;
+            int high = grade;
+            int low = grade;
+            int count = 1;
+            int fail_num = 0;
+            if (grade < 60){
+                fail_num += 1;
+            } 
+
+            while (grade != -1){
+                grade = Convert.ToInt32(Console.ReadLine());
+                avg += grade;
+                if (grade > high){
+                    high = grade;
+                }
+                if (grade < low){
+                    low = grade;
+                }
+                if (grade < 60){
+                fail_num += 1;
+            } 
+                count += 1;
+            }
+            avg = avg/count;
+
+            Console.WriteLine("Average is: " + avg);
+            Console.WriteLine("Low is: " + low);
+            Console.WriteLine("High is: " + high);
+            Console.WriteLine("Failed num is: " + fail_num);
+
         }
 
         public static void Assignment3()
