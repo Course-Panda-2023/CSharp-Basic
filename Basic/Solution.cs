@@ -26,21 +26,25 @@ namespace Basic
                 Console.WriteLine("enter grade, enter -1 to stop: ");
                 string gradeStr = Console.ReadLine();
                 grade = Convert.ToInt32(gradeStr);
-                if (grade < 60)
-                {
-                    fail += 1;
-                }
+               
                 if (grade >= 0 && grade <= 100)
                 {
+                    if (grade < 60)
+                    {
+                        fail += 1;
+                    }
                     numOfGrades += 1;
                     avg += grade;
                     if (low > grade)
                     {
                         low = grade;
                     }
-                    if (high < grade)
+                    else
                     {
-                        high = grade;
+                        if (high < grade)
+                        {
+                            high = grade;
+                        }
                     }
                 }
                 else
@@ -67,40 +71,47 @@ namespace Basic
                 {
                     Console.WriteLine("Fizz");
                 }
-                if (i % 5 == 0 && i % 3 != 0)
+                else
                 {
-                    Console.WriteLine("Buzz");
-                }
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                if (i % 3 != 0 && i % 5 != 0)
-                {
-                    Console.WriteLine(i);
+                    if (i % 5 == 0 && i % 3 != 0)
+                    {
+                        Console.WriteLine("Buzz");
+                    }
+                    else
+                    {
+                        if (i % 3 == 0 && i % 5 == 0)
+                        {
+                            Console.WriteLine("FizzBuzz");
+                        }
+                        else
+                        {
+                            if (i % 3 != 0 && i % 5 != 0)
+                            {
+                                Console.WriteLine(i);
+                            }
+                        }
+                    }
                 }
             }
         }
 
         public static void Assignment4()
         {
-            int num = 0;
-            int numbers = 0;
-            Console.WriteLine("enter number");
-            string numString = Console.ReadLine();
-            num = Convert.ToInt32(numString);
-            bool flag = true;
-            while (numbers != -1)
-            {
-                Console.WriteLine("enter number, enter -1 to stop: ");
-                numString = Console.ReadLine();
-                numbers = Convert.ToInt32(numString);
-                if (numbers % num != 0 && numbers != -1)
-                {
-                    flag = false;
-                }
+             int num= 0;
+        int numbers = 0;
+        Console.WriteLine("enter number");
+        string numString = Console.ReadLine();
+        num = Convert.ToInt32(numString);
+        bool flag = true;
+        while (numbers!=-1){
+            Console.WriteLine("enter number, enter -1 to stop: ");
+            numString = Console.ReadLine();
+            numbers = Convert.ToInt32(numString);
+            if(numbers%num!=0 && numbers!=-1){
+                flag=false;
             }
-            Console.WriteLine(flag);
+        }
+        Console.WriteLine(flag);
         }
     }
 }
