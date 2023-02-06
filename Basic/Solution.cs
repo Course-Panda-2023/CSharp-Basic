@@ -42,18 +42,19 @@ namespace Basic
 
         public static void Assignment3()
         {
-            for (int i = 1; i <= 1000; i++)
+            for (int currNum = 1; currNum <= 1000; currNum++)
             {
-                if (i%3==0)
+                if (currNum % 3 == 0)
                 {
-                    if (i % 5 == 0)
-                    {
-                        Console.WriteLine("FizzBuzz");
-                    }
+                    Console.WriteLine("Fizz");
+                }
+                if (currNum % 5 == 0)
+                {
                     Console.WriteLine("FizzBuzz");
-                } else 
+                }
+                if (currNum % 3!=0 && currNum% 5!=0) 
                 { 
-                    Console.WriteLine(i);
+                    Console.WriteLine(currNum);
                 }
             }
         }
