@@ -18,7 +18,7 @@ namespace Basic
     {
         public static void Assignment1()
         {
-            Console.WriteLine("!panda Hello!");
+            Console.WriteLine("panda Hello!");
         }
 
         public static void Assignment2()
