@@ -15,19 +15,26 @@ namespace Basic
 
         public static void Assignment2()
         {
-            List<double> grades = new List<double>();
-            int newGrade = Convert.ToInt32(Console.ReadLine());
+            double currGrade = Convert.ToDouble(Console.ReadLine());
+            double sumGrades = 0, minGrade = 0, maxGrade = 0, fails = 0, numGrades = 0;
 
-            while (newGrade != -1)
+            while (currGrade != -1)
             {
-                grades.Append(newGrade);
-                newGrade = Convert.ToInt32(Console.ReadLine());
+                numGrades += 1;
+                
+                if (currGrade < 60) { fails += 1; }
+
+                sumGrades += currGrade;
+                minGrade = Math.Min(minGrade, currGrade);
+                maxGrade = Math.Max(maxGrade, currGrade);
+                
+                currGrade = Convert.ToDouble(Console.ReadLine());
             }
             
-            Console.WriteLine($"Average: {grades.Average()}");
-            Console.WriteLine($"Maximum: {grades.Max()}");
-            Console.WriteLine($"Maximum: {grades.Min()}");
-            Console.WriteLine($"#Fails: {grades.Where(grade => grade < 60).Count()}");
+            Console.WriteLine($"Average: {sumGrades / numGrades}");
+            Console.WriteLine($"Maximum: {maxGrade}");
+            Console.WriteLine($"Maximum: {minGrade}");
+            Console.WriteLine($"#Fails: {fails}");
         }
 
         public static void Assignment3()
