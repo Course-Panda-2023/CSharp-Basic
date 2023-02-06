@@ -47,7 +47,7 @@ namespace Basic
                 }
             }
             double avg = sum / numbers;
-            Console.WriteLine($"The average is {avg}, \nThe maximum is {max}\nThe minimum is {min}\nFailure count {count}");
+            Console.WriteLine($"The average is {avg}, \nThe maximum is {max}\nThe minimum is {min}\nFailure count  {count}");
         }
 
         public static void Assignment3()
