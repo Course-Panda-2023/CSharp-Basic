@@ -23,15 +23,19 @@ namespace Basic
 
         public static void Assignment2()
         {
-            int total = 0;
-            int high = int.MinValue;
-            int low = int.MaxValue;
-            int count = 0;
-            Console.WriteLine("enter number:");
+            int total = 0;//the sum of the scores
+            int high = int.MinValue; //Highest score
+            int low = int.MaxValue; //lowest score
+            int count = 0;//The number of tests
             string num = Console.ReadLine();
             int intnum = Convert.ToInt32(num);
+            int fail = 0; //num of failed
             while (intnum != -1)
             {
+                if (intnum < 60)
+                {
+                fail++;
+                }
                 if (intnum > high)
                 {
                     high = intnum;
@@ -46,6 +50,9 @@ namespace Basic
                 intnum = Convert.ToInt32(num);
             }
             Console.WriteLine((double)total / count);
+            Console.WriteLine(high);
+            Console.WriteLine(low);
+            Console.WriteLine(fail);
         }
 
         public static void Assignment3()
