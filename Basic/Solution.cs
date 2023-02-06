@@ -31,13 +31,26 @@ namespace Basic
             {
                 gradeCounter++;
                 gradeSum += currGrade;
-                highestGrade = highestGrade < currGrade ? currGrade : highestGrade;
-                lowetGrade = lowetGrade > currGrade ? currGrade : lowetGrade;
-                numOfFails = currGrade < PASS_GRADE ? numOfFails + 1 : numOfFails;
+
+                if(highestGrade < currGrade)
+                {
+                    highestGrade = currGrade;
+                }
+
+                if (lowetGrade > currGrade)
+                {
+                    lowetGrade = currGrade;
+                }
+
+                if (currGrade < PASS_GRADE)
+                {
+                    numOfFails++;
+                }
                 Console.WriteLine("please enter a grade: ");
                 currGrade = int.Parse(Console.ReadLine());
             }
-            Console.WriteLine($"Grade avarage is: {Math.Round(gradeSum / gradeCounter, 2)} , the highest grade is: {highestGrade}, " +
+            double gradeAvarage = Math.Round(gradeSum / gradeCounter, 2);
+            Console.WriteLine($"Grade avarage is: {gradeAvarage} , the highest grade is: {highestGrade}, " +
                 $"and the lowest grade is: {lowetGrade}. the number of fails is: {numOfFails}");
             
         }
@@ -53,10 +66,14 @@ namespace Basic
                 }
                 if (currNum % 5 == 0)
                 {
+                    Console.WriteLine("Buzz");
+                }
+                if (currNum % 3 == 0 && currNum % 5 == 0)
+                {
                     Console.WriteLine("FizzBuzz");
                 }
-                if (currNum % 3!= 0 && currNum % 5 != 0) 
-                { 
+                else
+                {
                     Console.WriteLine(currNum);
                 }
             }
@@ -70,22 +87,22 @@ namespace Basic
             int firstNumber = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter input to check: ");
             int currInput = int.Parse(Console.ReadLine());
-            Boolean isDivides = true;
+            Boolean divides = true;
 
             while (currInput != STOP_CONDITION_FLAG)
             {
                 if (currInput % firstNumber != 0)
                 {
-                    isDivides = false;
-                    Console.WriteLine(isDivides);
+                    divides = false;
+                    Console.WriteLine(divides);
                     break;
                 }
                 Console.WriteLine("Enter input to check: ");
                 currInput = int.Parse(Console.ReadLine());
             }
-            if (isDivides)
+            if (divides)
             {
-                Console.WriteLine(isDivides);
+                Console.WriteLine(divides);
             }
         }
     }
