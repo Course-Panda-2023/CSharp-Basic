@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -69,9 +70,33 @@ namespace Basic
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            int num = 0, fisrt_num = 0, counter = 0;
+            bool status = true;
+            while(true)
+            {
+                num = Convert.ToInt32(Console.ReadLine());
+                if(num == -1)
+                {
+                    break;
+                }
+                counter++;
+                if (counter == 1)
+                {
+                    fisrt_num = num;
+                }
+                if(num % fisrt_num != 0)
+                {
+                    status = false;
+                }
+            }
+           if(status)
+            {
+                Console.WriteLine($"true");
+            }
+            else
+            {
+                Console.WriteLine($"false");
+            }
         }
     }
 }
