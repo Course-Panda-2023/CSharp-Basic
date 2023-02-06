@@ -17,9 +17,39 @@ namespace Basic
 
         public static void Assignment2()
         {
-            /*
-             * Write code here
-             */
+            int numberFails = 0;
+            int gradeSum = 0;
+            double gradeCount = 0;
+            int maxGrade = 0;
+            int minGrade = 0;
+            int input = Convert.ToInt32(Console.ReadLine());
+            while (input != -1)
+            {
+                if (input >= maxGrade)
+                {
+                    maxGrade = input;
+                }
+                if (input <= minGrade)
+                {
+                    minGrade = input;
+                }
+                gradeSum = gradeSum + input;
+                if (input < 60)
+                {
+                    numberFails = numberFails + input;
+                }
+                gradeCount = gradeCount + 1;
+            }
+            double gradeAverage = -1;
+            if (gradeCount != 0)
+            {
+                gradeAverage = gradeSum / gradeCount;
+            }
+            Console.WriteLine("Number of fails: " + numberFails + " Average: " + gradeAverage + " Minimum grade: " + minGrade + " Maximum grade: " + maxGrade);
+            else
+            {
+                Console.WriteLine("No grades entered");
+            }
         }
 
         public static void Assignment3()
