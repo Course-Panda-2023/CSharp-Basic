@@ -21,7 +21,7 @@ namespace Basic
             int inputNumber = Convert.ToInt32(Console.ReadLine());
             int worstGrade = inputNumber;
             int bestGrade = inputNumber;
-            int avg = inputNumber;
+            double avg = inputNumber;
             while (inputNumber != -1)
             {
                 Console.WriteLine("Enter number");
