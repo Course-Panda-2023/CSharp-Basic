@@ -16,6 +16,7 @@ namespace Basic
         public static void Assignment2()
         {
             int i = 1;
+            int failed = 0;
             Console.WriteLine("Enter number");
             int inputNumber = Convert.ToInt32(Console.ReadLine());
             int worstGrade = inputNumber;
@@ -29,19 +30,18 @@ namespace Basic
                 {
                     avg += inputNumber;
                     if (worstGrade > inputNumber)
-                    {
                         worstGrade = inputNumber;
-                    }
                     if (bestGrade < inputNumber)
-                    {
                         bestGrade = inputNumber;
-                    }
+                    if (inputNumber < 60)
+                        failed++;
                     i++;
                 }
             }
             Console.WriteLine("Average: " + avg / i);
             Console.WriteLine("Best Grade: " + bestGrade);
             Console.WriteLine("Worst Grade: " + worstGrade);
+            Console.WriteLine("Number of fails: " + failed);
         }
 
         public static void Assignment3()
