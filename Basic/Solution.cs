@@ -44,34 +44,26 @@ namespace Basic
 
         public static void Assignment3()
         {
-            for (int i = 0; i < 1000 ; i++)
+            for (int i = 1; i <= 1000 ; i++)
             {
-                bool printed = false;
-                if ((i + 1) % 3 == 0)
-                {
+                if (i % 3 == 0)
                     Console.Write("Fizz");
-                    printed = true;
-                }
-                if ((i + 1) % 5 == 0)
-                {
+                if (i % 5 == 0)
                     Console.Write("Buzz");
-                    printed= true;
-                }
-                if (!printed)
-                    Console.Write(i + 1);
+                else if (i % 3 != 0)
+                    Console.Write(i);
                 Console.WriteLine();
             }
         }
 
         public static void Assignment4()
         {
-            Console.WriteLine("Please enter the div: ");
+            Console.WriteLine("Please enter a series of numbers: ");
             int div = Convert.ToInt32(Console.ReadLine());
             int num = 0;
             bool result = true;
             while (num != -1)
             {
-                Console.WriteLine("Please enter a number: ");
                 num = Convert.ToInt32(Console.ReadLine());
                 if (num % div != 0 && num != -1)
                     result = false;
