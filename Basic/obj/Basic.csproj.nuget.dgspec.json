@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj": {}
+    "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic_another\\Basic\\Basic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj": {
+    "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic_another\\Basic\\Basic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj",
+        "projectUniqueName": "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic_another\\Basic\\Basic.csproj",
         "projectName": "Basic",
-        "projectPath": "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj",
+        "projectPath": "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic_another\\Basic\\Basic.csproj",
         "packagesPath": "C:\\Users\\FI326727\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic\\Basic\\obj\\",
+        "outputPath": "C:\\Users\\FI326727\\Source\\Repos\\CSharp-Basic_another\\Basic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FI326727\\AppData\\Roaming\\NuGet\\NuGet.Config",

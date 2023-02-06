@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace Basic
 {
@@ -15,13 +16,33 @@ namespace Basic
         }
 
         public static void Assignment2()
-        {
-            int score = 0, avg = 0, max = 0;
-            while (score != -1)
-            {
-                score = Console.Read();
-                Console.Write(score);
+        {            
+            int score = 0, sum = 0, min = Int32.MaxValue, max = 0, counter = 0, fails_conter = 0;
+            double avg = 0;
+            while (true)
+            {                
+                counter++;                
+                score = Convert.ToInt32(Console.ReadLine());
+                if (score == -1)
+                { 
+                    break;
+                }
+                sum  = sum + score;                
+                if (score > max)
+                {
+                    max = score;
+                }
+                if (score < min)
+                {
+                    min = score;
+                }
+                if (score < 60)
+                {
+                    fails_conter++;
+                }
             }
+            avg = (double)sum / counter;            
+            Console.WriteLine($"Max: {max}, Min: {min}, Avg: {avg}, Failed_num {fails_conter}");
             
         }
 
