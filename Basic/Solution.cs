@@ -84,6 +84,7 @@ namespace Basic
 
         public static void Assignment4()
         {
+            Console.WriteLine("Enter a number that all be dived by");
             string input = Console.ReadLine();
             if (input is null)
             {
@@ -96,16 +97,16 @@ namespace Basic
             while (number != -1)
             {
                 input = Console.ReadLine();
-                if (!isDivide) 
-                {
-                    continue;
-                }
+                
                 if (input is not null)
                 {
                     number = Convert.ToInt32(input);
-                    if (number % div != 0)
+                    if (number % div != 0 && number != -1)
                     {
-                        isDivide = false;
+                        if (isDivide)
+                        {
+                            isDivide = false;
+                        }   
                     }
                 }
             }
