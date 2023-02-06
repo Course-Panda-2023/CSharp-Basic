@@ -19,7 +19,7 @@ namespace Basic
             int high = 0;
             int fail = 0;
             double avg = 0;
-            int numofgrades = 0;
+            int numOfGrades = 0;
             int grade = 0;
             while (grade != -1)
             {
@@ -32,7 +32,7 @@ namespace Basic
                 }
                 if (grade >= 0 && grade <= 100)
                 {
-                    numofgrades += 1;
+                    numOfGrades += 1;
                     avg += grade;
                     if (low > grade)
                     {
@@ -49,9 +49,9 @@ namespace Basic
                 }
 
             }
-            if (numofgrades != 0)
+            if (numOfGrades != 0)
             {
-                avg = avg / numofgrades;
+                avg = avg / numOfGrades;
             }
             Console.WriteLine("avg: " + avg);
             Console.WriteLine("low: " + low);
@@ -61,16 +61,46 @@ namespace Basic
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            for (int i = 1; i <= 1000; i++)
+            {
+                if (i % 3 == 0 && i % 5 != 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                if (i % 5 == 0 && i % 3 != 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                if (i % 3 != 0 && i % 5 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            int num = 0;
+            int numbers = 0;
+            Console.WriteLine("enter number");
+            string numString = Console.ReadLine();
+            num = Convert.ToInt32(numString);
+            bool flag = true;
+            while (numbers != -1)
+            {
+                Console.WriteLine("enter number, enter -1 to stop: ");
+                numString = Console.ReadLine();
+                numbers = Convert.ToInt32(numString);
+                if (numbers % num != 0 && numbers != -1)
+                {
+                    flag = false;
+                }
+            }
+            Console.WriteLine(flag);
         }
     }
 }
