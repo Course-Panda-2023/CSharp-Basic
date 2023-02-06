@@ -52,7 +52,34 @@ namespace Basic
 
         public static void Assignment3()
         {
-            //Enumerable.Range(0, 1000).Select(x => x % 3 == 0? x % 5 == 0? : )
+            const int MIN_RANGE = 0;
+            const int MAX_RANGE = 1000;
+
+            for (int i = MIN_RANGE; i < MAX_RANGE; ++i)
+            {
+                if (i % 5 == 0)
+                {
+                    if (i % 3  == 0)
+                    {
+                        Console.WriteLine("FizzBuzz");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Buzz");
+                    }
+                }
+                else
+                {
+                    if (i % 3 == 0)
+                    {
+                        Console.WriteLine("Fizz");
+                    }
+                    else
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
         }
 
         public static void Assignment4()
