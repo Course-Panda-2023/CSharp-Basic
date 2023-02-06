@@ -8,6 +8,7 @@ namespace Basic
 {
     internal class Solution
     {
+        public static int FAIL_THRESH = 60;
         public static void Assignment1()
         {
             Console.WriteLine("Hello Panda");
@@ -15,85 +16,77 @@ namespace Basic
 
         public static void Assignment2()
         {
-            int grade = Convert.ToInt32(Console.ReadLine());
             float avg = 0;
-            int high = grade;
-            int low = grade;
+            int high = 0;
+            int low = 100;
             int count = 0;
             int fail_num = 0;
-
-            while (grade != -1)
+            int grade;
+            do
             {
-                avg += grade;
-                if (grade > high)
-                {
-                    high = grade;
-                }
-                if (grade < low)
-                {
-                    low = grade;
-                }
-                if (grade < 60)
-                {
-                fail_num++;
-                } 
-                count += 1;
                 grade = Convert.ToInt32(Console.ReadLine());
+                if (grade != -1)
+                {
+                    avg += grade;
+                    high = Math.Max(grade, high);
+                    low = Math.Min(grade, low);
+                    if (grade < FAIL_THRESH)
+                    {
+                        fail_num++;
+                    } 
+                    count++;
+                }
             }
-            avg = avg/count;
+            while (grade != -1);
+            avg /= count;
 
-            Console.WriteLine("Average is: " + avg);
-            Console.WriteLine("Low is: " + low);
-            Console.WriteLine("High is: " + high);
-            Console.WriteLine("Failed num is: " + fail_num);
-
+            Console.WriteLine($"Average is: {avg}");
+            Console.WriteLine($"Low is: {low}");
+            Console.WriteLine($"High is: {high}");
+            Console.WriteLine($"Failed num is: {fail_num}");
         }
 
         public static void Assignment3()
         {
             for(int i=1; i<=1000; i++)
             {
-                if (i % 3 == 0)
+                if (i % 3 == 0 && i % 5 == 0)
                 {
-                    if (i % 5 == 0)
-                    {
-                        Console.WriteLine("FizzBuzz");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Fizz");
-                    }
-                    
+                    Console.WriteLine("FizzBuzz");                    
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
                 }
                 else if (i % 5 == 0)
                 {
-                        Console.WriteLine("Buzz");
+                    Console.WriteLine("Buzz");
                 }
                 else
                 {
-                        Console.WriteLine(i);
-
+                    Console.WriteLine(i);
                 }
             }
         }
 
         public static void Assignment4()
         {
-            bool all_divis = true;
+            bool allDivisible = true;
             Console.WriteLine("Enter division number");
-            int divis = Convert.ToInt32(Console.ReadLine());
+            int diviseNum = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter all numbers, stop with -1");
-            int num = Convert.ToInt32(Console.ReadLine());
-            while(num != -1)
+            int num = 0; 
+            do
             {
-                if(num % divis != 0)
+                if(num % diviseNum != 0)
                 {
-                    all_divis = false;
+                    allDivisible = false;
                 }
                 num = Convert.ToInt32(Console.ReadLine());
             }
-            Console.WriteLine(all_divis);
-            
+            while(num != -1);
+
+            Console.WriteLine(allDivisible);
         }
     }
 }
