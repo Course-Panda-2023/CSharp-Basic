@@ -10,30 +10,73 @@ namespace Basic
     {
         public static void Assignment1()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Hello panda!");
         }
 
         public static void Assignment2()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Please enter grade: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int sum = num;
+            int max = num;
+            int min = num;
+            int counter = 1;
+            int amountOFFails = num < 60 ? 1 : 0;
+            while (num != -1)
+            {
+                Console.WriteLine("Please enter grade: ");
+                num = Convert.ToInt32(Console.ReadLine());
+                if(num != -1)
+                {
+                    sum += num;
+                    counter++;
+                    max = max < num ? num : max;
+                    min = min > num ? num : min;
+                    amountOFFails += num < 60 ? 1 : 0;
+                }
+            }
+            Console.WriteLine("Grade average: " + (sum / counter));
+            Console.WriteLine("Highest grade: " + max);
+            Console.WriteLine("Lowest grade: " + min);
+            Console.WriteLine("Amount Of Fails: " + amountOFFails);
+
         }
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            for (int i = 0; i < 1000 ; i++)
+            {
+                bool printed = false;
+                if ((i + 1) % 3 == 0)
+                {
+                    Console.Write("Fizz");
+                    printed = true;
+                }
+                if ((i + 1) % 5 == 0)
+                {
+                    Console.Write("Buzz");
+                    printed= true;
+                }
+                if (!printed)
+                    Console.Write(i + 1);
+                Console.WriteLine();
+            }
         }
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Please enter the div: ");
+            int div = Convert.ToInt32(Console.ReadLine());
+            int num = 0;
+            bool result = true;
+            while (num != -1)
+            {
+                Console.WriteLine("Please enter a number: ");
+                num = Convert.ToInt32(Console.ReadLine());
+                if (num % div != 0 && num != -1)
+                    result = false;
+            }
+            Console.WriteLine(result);
         }
     }
 }
