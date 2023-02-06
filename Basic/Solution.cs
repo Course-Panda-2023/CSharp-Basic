@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Basic
 {
     internal class Solution
@@ -16,7 +11,7 @@ namespace Basic
         public static void Assignment2()
         {
             double currGrade = Convert.ToDouble(Console.ReadLine());
-            double sumGrades = 0, minGrade = 0, maxGrade = 0, fails = 0, numGrades = 0;
+            double sumGrades = 0, minGrade = 100, maxGrade = 0, fails = 0, numGrades = 0;
 
             while (currGrade != -1)
             {
@@ -25,15 +20,15 @@ namespace Basic
                 if (currGrade < 60) { fails += 1; }
 
                 sumGrades += currGrade;
-                minGrade = Math.Min(minGrade, currGrade);
                 maxGrade = Math.Max(maxGrade, currGrade);
+                minGrade = Math.Min(minGrade, currGrade);
                 
                 currGrade = Convert.ToDouble(Console.ReadLine());
             }
             
             Console.WriteLine($"Average: {sumGrades / numGrades}");
             Console.WriteLine($"Maximum: {maxGrade}");
-            Console.WriteLine($"Maximum: {minGrade}");
+            Console.WriteLine($"Minimum: {minGrade}");
             Console.WriteLine($"#Fails: {fails}");
         }
 
