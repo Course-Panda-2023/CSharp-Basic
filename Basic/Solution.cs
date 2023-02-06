@@ -16,28 +16,29 @@ namespace Basic
         public static void Assignment2()
         {
             int grade = Convert.ToInt32(Console.ReadLine());
-            int avg = grade;
+            float avg = 0;
             int high = grade;
             int low = grade;
-            int count = 1;
+            int count = 0;
             int fail_num = 0;
-            if (grade < 60){
-                fail_num += 1;
-            } 
 
-            while (grade != -1){
-                grade = Convert.ToInt32(Console.ReadLine());
+            while (grade != -1)
+            {
                 avg += grade;
-                if (grade > high){
+                if (grade > high)
+                {
                     high = grade;
                 }
-                if (grade < low){
+                if (grade < low)
+                {
                     low = grade;
                 }
-                if (grade < 60){
-                fail_num += 1;
-            } 
+                if (grade < 60)
+                {
+                fail_num++;
+                } 
                 count += 1;
+                grade = Convert.ToInt32(Console.ReadLine());
             }
             avg = avg/count;
 
@@ -50,9 +51,30 @@ namespace Basic
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            for(int i=1; i<=1000; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    if (i % 5 == 0)
+                    {
+                        Console.WriteLine("FizzBuzz");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Fizz");
+                    }
+                    
+                }
+                else if (i % 5 == 0)
+                {
+                        Console.WriteLine("Buzz");
+                }
+                else
+                {
+                        Console.WriteLine(i);
+
+                }
+            }
         }
 
         public static void Assignment4()
