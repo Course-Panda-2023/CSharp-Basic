@@ -10,9 +10,7 @@ namespace Basic
     {
         public static void Assignment1()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Hello panda!");
         }
 
         public static void Assignment2()
