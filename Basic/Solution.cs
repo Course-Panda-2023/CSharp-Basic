@@ -77,6 +77,15 @@ namespace Basic
             /*
              * Write code here
              */
+            double divider = Convert.ToDouble(Console.ReadLine()!);
+            double num = Convert.ToDouble(Console.ReadLine()!);
+            bool isDivide = true;
+            while (num != -1)
+            {
+                isDivide = isDivide && num % divider == 0;
+                num = Convert.ToDouble(Console.ReadLine()!);
+            }
+            Console.WriteLine($"{isDivide}");
         }
     }
 }
