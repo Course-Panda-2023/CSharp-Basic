@@ -39,16 +39,56 @@ namespace Basic
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            bool threeMultiplaction;
+            bool fiveMultiplaction;
+            
+            for (int i = 1; i <= 1000; i++)
+            {
+                threeMultiplaction = (i % 3) == 0;
+                fiveMultiplaction = (i % 5) == 0;
+
+                if (threeMultiplaction && fiveMultiplaction)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else
+                {
+                    if (threeMultiplaction)
+                    {
+                        Console.WriteLine("Fizz");
+                    }
+                    else
+                    {
+                        if (fiveMultiplaction)
+                        {
+                            Console.WriteLine("Buzz");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{i}");
+                        }
+                    }
+                }
+            }
         }
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            double divisor = Convert.ToDouble(Console.ReadLine());
+            double divided = Convert.ToDouble(Console.ReadLine());
+            bool output = true;
+
+            while (divided != -1)
+            {
+                if (divided % divisor != 0)
+                {
+                    output = false;
+                }
+                
+                divided = Convert.ToDouble(Console.ReadLine());
+            }
+            
+            Console.WriteLine($"{output}");
         }
     }
 }
