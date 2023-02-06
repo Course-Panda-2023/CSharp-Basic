@@ -60,7 +60,8 @@ namespace Basic
             Console.WriteLine("highest grade: " + highestGrade);
             Console.WriteLine("lowest grade: " + lowestGrade);
             Console.WriteLine("number of fails: " + numOfFails);
-            Console.WriteLine("grade average: " + gradeSum / gradeNum);
+            double average = Convert.ToDouble(gradeSum / gradeNum);
+            Console.WriteLine("grade average: " + average);
         }
 
         public static void Assignment3()
@@ -68,7 +69,7 @@ namespace Basic
             int num = 1;
             while (num < 1000)
             {
-                if (num % 3 == 0 && num % 5 == 0)
+                if (num % 15 == 0)
                 {
                     Console.WriteLine("FizzBuzz");
                 }
@@ -97,9 +98,9 @@ namespace Basic
             bool areNumsDividable = true;
             Console.WriteLine("give me a num to get divisor: ");
             int divNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("give me a num: ");
             while (loop)
             {
-                Console.WriteLine("give me a num: ");
                 int num = int.Parse(Console.ReadLine());
                 if (num == -1)
                 {
@@ -108,6 +109,7 @@ namespace Basic
                 if (!(num % divNum == 0)) { 
                     areNumsDividable = false;
                 }
+                //Console.Write(",");
             }
             Console.WriteLine(areNumsDividable);
         }
