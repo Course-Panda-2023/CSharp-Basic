@@ -10,30 +10,81 @@ namespace Basic
     {
         public static void Assignment1()
         {
-            /*
-             * Write code here
-             */
+            Console.WriteLine("Hello Panda!");
         }
 
         public static void Assignment2()
         {
-            /*
-             * Write code here
-             */
+            int i = 1;
+            Console.WriteLine("Enter number");
+            int inputNumber = Convert.ToInt32(Console.ReadLine());
+            int worstGrade = inputNumber;
+            int bestGrade = inputNumber;
+            int avg = inputNumber;
+            while (inputNumber != -1)
+            {
+                Console.WriteLine("Enter number");
+                inputNumber = Convert.ToInt32(Console.ReadLine());
+                if (inputNumber != -1)
+                {
+                    avg += inputNumber;
+                    if (worstGrade > inputNumber)
+                    {
+                        worstGrade = inputNumber;
+                    }
+                    if (bestGrade < inputNumber)
+                    {
+                        bestGrade = inputNumber;
+                    }
+                    i++;
+                }
+            }
+            Console.WriteLine("Average: " + avg / i);
+            Console.WriteLine("Best Grade: " + bestGrade);
+            Console.WriteLine("Worst Grade: " + worstGrade);
         }
 
         public static void Assignment3()
         {
-            /*
-             * Write code here
-             */
+            for (int i = 1; i <= 1000; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else { Console.WriteLine(i); }
+            }
         }
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            bool flag = true;
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number == -1)
+            {
+                flag = false;
+                Console.WriteLine(flag);
+            }
+            else
+            {
+                while (number != -1)
+                {
+                    if (number % 3 != 0)
+                    {
+                        flag = false;
+                    }
+                    number = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine(flag);
+            }
         }
     }
 }
