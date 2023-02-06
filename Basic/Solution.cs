@@ -42,7 +42,7 @@ namespace Basic
 
         public static void Assignment3()
         {
-            for (int i = 0; i < 1000; i++)
+            for (int i = 1; i <= 1000; i++)
             {
                 if (i % 15 == 0)
                     Console.WriteLine("FizzBuzz");
@@ -64,7 +64,6 @@ namespace Basic
             {
                 if (divide3 && num % 3 != 0)
                     divide3 = false;
-                Console.WriteLine("Enter another number: ");
                 num = int.Parse(Console.ReadLine());
             }
             Console.WriteLine(divide3);
