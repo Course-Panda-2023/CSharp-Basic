@@ -91,7 +91,7 @@ namespace Basic
                 return;
             }
             bool isDivide = true;
-            int div = Convert.ToInt32(input);
+            int commonDivisor = Convert.ToInt32(input);
             int number = 0;
             Console.WriteLine("Enter numbers. Press -1 to exit");
             while (number != -1)
@@ -101,7 +101,7 @@ namespace Basic
                 if (input is not null)
                 {
                     number = Convert.ToInt32(input);
-                    if (number % div != 0 && number != -1)
+                    if (number % commonDivisor != 0 && number != -1)
                     {
                         if (isDivide)
                         {
