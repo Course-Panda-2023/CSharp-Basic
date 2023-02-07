@@ -62,14 +62,14 @@ namespace Basic
         public static void Assignment4()
         {
             Console.WriteLine("Please enter a series of numbers: ");
-            int div = Convert.ToInt32(Console.ReadLine());
+            int divisor = Convert.ToInt32(Console.ReadLine());
             int num = 0;
             bool result = true;
             while (num != -1)
             {
-                num = Convert.ToInt32(Console.ReadLine());
-                if (num % div != 0 && num != -1)
+                if (num % divisor != 0)
                     result = false;
+                num = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine(result);
         }
