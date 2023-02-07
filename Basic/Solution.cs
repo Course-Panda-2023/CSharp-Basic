@@ -67,21 +67,22 @@ namespace Basic
         public static void Assignment4()
         {
             bool flag = true;
-            int number = Convert.ToInt32(Console.ReadLine());
-            if (number == -1)
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber == -1)
             {
                 flag = false;
                 Console.WriteLine(flag);
             }
             else
             {
-                while (number != -1)
+                int newNumber = Convert.ToInt32(Console.ReadLine());
+                while (newNumber != -1)
                 {
-                    if (number % 3 != 0)
+                    if (newNumber % firstNumber != 0)
                     {
                         flag = false;
                     }
-                    number = Convert.ToInt32(Console.ReadLine());
+                    newNumber = Convert.ToInt32(Console.ReadLine());
                 }
                 Console.WriteLine(flag);
             }
