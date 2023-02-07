@@ -10,7 +10,7 @@ namespace Basic
     {
         public static void ManageAssignment(int assignmentNum, Action assignment, string correctRes)
         {
-            Console.WriteLine("Running assignment 1...");
+            Console.WriteLine($"Running assignment {assignmentNum}...");
             Console.WriteLine($"Wanted solution: {correctRes}");
             Console.Write($"Your solution: ");
             assignment();
