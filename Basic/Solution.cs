@@ -72,15 +72,18 @@
 
         public static void Assignment4()
         {
+            string input;
+            bool isAllDivided;
+            int commonDivisor, number = 0;
             Console.WriteLine("Enter a number that all be dived by this common divisor");
-            string input = Console.ReadLine();
+            input = Console.ReadLine();
             if (input is null)
             {
                 return;
             }
-            bool isDivide = true;
-            int commonDivisor = Convert.ToInt32(input);
-            int number = 0;
+            isAllDivided = true;
+            commonDivisor = Convert.ToInt32(input);
+            number = 0;
             Console.WriteLine("Enter numbers. Press -1 to exit");
             while (number != -1)
             {
@@ -91,14 +94,14 @@
                     number = Convert.ToInt32(input);
                     if (number % commonDivisor != 0 && number != -1)
                     {
-                        if (isDivide)
+                        if (isAllDivided)
                         {
-                            isDivide = false;
+                            isAllDivided = false;
                         }   
                     }
                 }
             }
-            Console.WriteLine(isDivide ? "true" : "false");
+            Console.WriteLine(isAllDivided ? "true" : "false");
         }
     }
 }
