@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Basic
+﻿namespace Basic
 {
     internal class Solution
     {
@@ -57,34 +51,28 @@ namespace Basic
 
             for (int i = MIN_RANGE; i < MAX_RANGE; ++i)
             {
-                if (i % 5 == 0)
+                if (i % 3 == 0)
                 {
-                    if (i % 3  == 0)
-                    {
-                        Console.WriteLine("FizzBuzz");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Buzz");
-                    }
+                    Console.Write("Fizz");
                 }
                 else
                 {
-                    if (i % 3 == 0)
+                    if (i % 5 == 0)
                     {
-                        Console.WriteLine("Fizz");
+                        Console.Write("Buzz");
                     }
                     else
                     {
-                        Console.WriteLine(i);
+                        Console.Write(i);
                     }
                 }
+                Console.WriteLine();
             }
         }
 
         public static void Assignment4()
         {
-            Console.WriteLine("Enter a number that all be dived by");
+            Console.WriteLine("Enter a number that all be dived by this common divisor");
             string input = Console.ReadLine();
             if (input is null)
             {
