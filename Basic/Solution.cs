@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,31 +16,33 @@ namespace Basic
 
         public static void Assignment2()
         {
-            Console.WriteLine("Please enter grade: ");
+            const int FailedGrade = 60;
+            int sum = 0;
+            int maxGrade = 0;
+            int minGrade = 100;
+            int amountOfGrades = 0;
+            int amountOfFails = 0;
+
+            Console.WriteLine("Please enter a grade: ");
             int num = Convert.ToInt32(Console.ReadLine());
-            int sum = num;
-            int max = num;
-            int min = num;
-            int counter = 1;
-            int amountOFFails = num < 60 ? 1 : 0;
             while (num != -1)
             {
-                Console.WriteLine("Please enter grade: ");
-                num = Convert.ToInt32(Console.ReadLine());
-                if(num != -1)
-                {
-                    sum += num;
-                    counter++;
-                    max = max < num ? num : max;
-                    min = min > num ? num : min;
-                    amountOFFails += num < 60 ? 1 : 0;
-                }
-            }
-            Console.WriteLine("Grade average: " + (sum / counter));
-            Console.WriteLine("Highest grade: " + max);
-            Console.WriteLine("Lowest grade: " + min);
-            Console.WriteLine("Amount Of Fails: " + amountOFFails);
+                sum += num;
+                amountOfGrades++;
+                if (maxGrade < num)
+                    maxGrade = num;
+                if (minGrade > num)
+                    minGrade = num;
+                if(num < FailedGrade)
+                    amountOfFails++;
 
+                Console.WriteLine("Please enter a grade: ");
+                num = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine($"Grade average: {(sum / amountOfGrades)}");
+            Console.WriteLine($"Highest grade: {maxGrade}");
+            Console.WriteLine($"Lowest grade: {minGrade}");
+            Console.WriteLine($"Amount Of Fails: {amountOfFails}");
         }
 
         public static void Assignment3()
