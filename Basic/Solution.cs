@@ -55,17 +55,15 @@
                 {
                     Console.Write("Fizz");
                 }
-                else
+                if (i % 5 == 0)
                 {
-                    if (i % 5 == 0)
-                    {
-                        Console.Write("Buzz");
-                    }
-                    else
-                    {
-                        Console.Write(i);
-                    }
+                    Console.Write("Buzz");
                 }
+                if (i % 5 != 0 && i % 3 != 0)
+                {
+                    Console.Write(i);
+                }
+                
                 Console.WriteLine();
             }
         }
