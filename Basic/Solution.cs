@@ -36,11 +36,11 @@ namespace Basic
                 {
                     numOfFails++;
                 }
-                else if (highestGrade < currGrade)
+                if (highestGrade < currGrade)
                 {
                     highestGrade = currGrade;
                 }
-                else if (lowetGrade > currGrade)
+                if (lowetGrade > currGrade)
                 {
                     lowetGrade = currGrade;
                 }
