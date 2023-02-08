@@ -32,20 +32,19 @@ namespace Basic
                 gradeCounter++;
                 gradeSum += currGrade;
 
-                if(highestGrade < currGrade)
-                {
-                    highestGrade = currGrade;
-                }
-
-                if (lowetGrade > currGrade)
-                {
-                    lowetGrade = currGrade;
-                }
-
                 if (currGrade < PASS_GRADE)
                 {
                     numOfFails++;
                 }
+                else if (highestGrade < currGrade)
+                {
+                    highestGrade = currGrade;
+                }
+                else if (lowetGrade > currGrade)
+                {
+                    lowetGrade = currGrade;
+                }
+
                 Console.WriteLine("please enter a grade: ");
                 currGrade = int.Parse(Console.ReadLine());
             }
@@ -60,17 +59,17 @@ namespace Basic
             
             for (int currNum = 1; currNum <= 1000; currNum++)
             {
-                if (currNum % 3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                if (currNum % 5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                }
                 if (currNum % 3 == 0 && currNum % 5 == 0)
                 {
                     Console.WriteLine("FizzBuzz");
+                }
+                else if (currNum % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (currNum % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
                 }
                 else
                 {
