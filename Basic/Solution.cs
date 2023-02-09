@@ -30,7 +30,7 @@ namespace Basic
                 {
                     max = score;
                 }
-                if (score < min)
+                else if (score < min)
                 {
                     min = score;
                 }
@@ -42,7 +42,7 @@ namespace Basic
                 counter++;
             }
             avg = (double)sum / counter;            
-            Console.WriteLine($"Max: {max}, Min: {min}, Avg: {avg}, Failed_num {failsCounter}");
+            Console.WriteLine($"Max: {max}, Min: {min}, Avg: {avg}, Failed_num: {failsCounter}");
             
         }
 
