@@ -2,4 +2,4 @@
 using Basic;
 
 Console.WriteLine("Checking your solutions...");
-Helper.ManageAssignment(4, Solution.Assignment4, "Hello panda!");
+Helper.ManageAssignment(2, Solution.Assignment2, "Hello panda!");

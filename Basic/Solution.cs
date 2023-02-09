@@ -17,17 +17,14 @@ namespace Basic
         }
 
         public static void Assignment2()
-        {            
-            int score = 0, sum = 0, min = 100, max = 0, counter = 0, failsCounter = 0;
+        {
+            int score = 0, sum = 0, min = 100, max = 0;
+            int counter = 0, failsCounter = 0;
+            const int failThreshold = 60;
             double avg = 0;
-            while (true)
-            {                
-                counter++;                
-                score = Convert.ToInt32(Console.ReadLine());
-                if (score == -1)
-                { 
-                    break;
-                }
+            score = Convert.ToInt32(Console.ReadLine());
+            while (score != -1)
+            {                           
                 sum  = sum + score;                
                 if (score > max)
                 {
@@ -37,10 +34,12 @@ namespace Basic
                 {
                     min = score;
                 }
-                if (score < 60)
+                if (score < failThreshold)
                 {
                     failsCounter++;
                 }
+                score = Convert.ToInt32(Console.ReadLine());
+                counter++;
             }
             avg = (double)sum / counter;            
             Console.WriteLine($"Max: {max}, Min: {min}, Avg: {avg}, Failed_num {failsCounter}");
