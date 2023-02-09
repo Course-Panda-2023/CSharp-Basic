@@ -18,7 +18,7 @@ namespace Basic
 
         public static void Assignment2()
         {            
-            int score = 0, sum = 0, min = Int32.MaxValue, max = 0, counter = 0, failsCounter = 0;
+            int score = 0, sum = 0, min = 100, max = 0, counter = 0, failsCounter = 0;
             double avg = 0;
             while (true)
             {                
@@ -73,19 +73,15 @@ namespace Basic
             int num = 0, fisrtNum = 0, counter = 0;
             bool status = true;
             num = Convert.ToInt32(Console.ReadLine());
+            fisrtNum = num;
             while (num != -1)
             {               
-                
-                counter++;
-                if (counter == 1)
-                {
-                    fisrtNum = num;
-                }
                 if(num % fisrtNum != 0)
                 {
                     status = false;
                 }
                 num = Convert.ToInt32(Console.ReadLine());
+                counter++;
             }
            if(!status)
             {
