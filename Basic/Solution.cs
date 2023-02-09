@@ -70,33 +70,29 @@ namespace Basic
 
         public static void Assignment4()
         {
-            int num = 0, fisrt_num = 0, counter = 0;
+            int num = 0, fisrtNum = 0, counter = 0;
             bool status = true;
-            while(true)
-            {
-                num = Convert.ToInt32(Console.ReadLine());
-                if(num == -1)
-                {
-                    break;
-                }
+            num = Convert.ToInt32(Console.ReadLine());
+            while (num != -1)
+            {               
+                
                 counter++;
                 if (counter == 1)
                 {
-                    fisrt_num = num;
+                    fisrtNum = num;
                 }
-                if(num % fisrt_num != 0)
+                if(num % fisrtNum != 0)
                 {
                     status = false;
                 }
+                num = Convert.ToInt32(Console.ReadLine());
             }
-           if(status)
-            {
-                Console.WriteLine($"true");
-            }
-            else
+           if(!status)
             {
                 Console.WriteLine($"false");
+                return;
             }
+           Console.WriteLine($"true");
         }
     }
 }
