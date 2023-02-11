@@ -25,14 +25,13 @@ namespace Basic
                     input = Console.ReadLine(); // collecting console input
                     if (input == null)
                         {Console.Write("invalid input");}
-                    else
-                    {
+
+                    else{
                         val = Convert.ToInt32(input); // Converting to integer type
-                        Console.WriteLine("You entered: {0}", val);
                         if (val > 0)
                             {break;}
-                        else
-                            {num_lst.Add(val);} 
+                        Console.WriteLine("You entered: {0}", val);
+                            {num_lst.Add(val);}
                     }
                     
                 }
@@ -48,20 +47,34 @@ namespace Basic
                 int top_grade = Queryable.Max(num_lst.AsQueryable());
                 int low_grade = Queryable.Min(num_lst.AsQueryable());
 
-                Console.WriteLine("Grades: ", num_lst);
-                Console.WriteLine("Average grade: ", avg);
-                Console.WriteLine("Top grade: ",top_grade);
-                Console.WriteLine("Lowest grade: ", low_grade);
-                Console.WriteLine("Failed",fail_count,"tests");
+                Console.WriteLine($"Grades: {num_lst}");
+                Console.WriteLine($"Average grade: {avg}");
+                Console.WriteLine($"Top grade: {top_grade}");
+                Console.WriteLine($"Lowest grade: {low_grade}");
+                Console.WriteLine($"Failed {fail_count} tests");
         }
         private static int fail_count = 0;
         private static int passing_grade = 60;
+        private static int num = 0;
 
         public static void Assignment3()
+        
         {
-            /*
-             * Write code here
-             */
+            for (int num = 1; num < 1001; num++);
+            string i_str = $"{num}";
+            if ((num % 15) == 0)
+                {Console.WriteLine("FizzBuzz");}
+
+            else if ((num % 5) == 0)
+                {Console.WriteLine("Buzz");}
+
+            else if ((num % 3) == 0)
+                {Console.WriteLine("Fizz");}
+
+            else
+                {Console.WriteLine(i_str);}
+            
+
         }
 
         public static void Assignment4()
