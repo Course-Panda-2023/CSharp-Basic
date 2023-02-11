@@ -106,9 +106,50 @@ namespace Basic
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
+            bool stopGettingNums = false;
+            int firstNum;
+            bool isFirstNum = true;
+            int currentNum = 0;
+            int divider = 0;
+            bool areNumbersDivided = true;
+            while (stopGettingNums == false)
+            {
+                try
+                {
+                    currentNum = Int32.Parse(Console.ReadLine());
+                    if (isFirstNum == true)
+                    {
+                        if (currentNum == 0)
+                        {
+                            Console.WriteLine("Invalid first number");
+                        }
+                        else
+                        {
+                            divider = currentNum;
+                            isFirstNum= false;
+                        }
+                    }
+                    else
+                    {
+                        if (currentNum == -1)
+                        {
+                            stopGettingNums = true;
+                        }
+                        else
+                        {
+                            if (currentNum % divider != 0)
+                            {
+                                areNumbersDivided= false;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex) 
+                {
+                    Console.WriteLine("Invalid number");
+                }
+            }
+            Console.WriteLine($"{areNumbersDivided}");
         }
     }
 }
