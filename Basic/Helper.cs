@@ -15,5 +15,7 @@ namespace Basic
             Console.Write($"Your solution: ");
             assignment();
         }
+
+
     }
 }
