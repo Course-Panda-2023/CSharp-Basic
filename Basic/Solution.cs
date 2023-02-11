@@ -21,16 +21,16 @@ namespace Basic
                 {
                     string? input;
                     int val;
-                    Console.WriteLine("Enter an integer value: ");
+                    Console.WriteLine("Enter an integer value");
                     input = Console.ReadLine(); // collecting console input
                     if (input == null)
-                        {Console.Write("invalid input");}
+                        {Console.Write("Invalid input");}
 
                     else{
                         val = Convert.ToInt32(input); // Converting to integer type
-                        if (val > 0)
+                        if (val < 0)
                             {break;}
-                        Console.WriteLine("You entered: {0}", val);
+                        Console.WriteLine("You entered: {0}", input);
                             {num_lst.Add(val);}
                     }
                     
@@ -55,12 +55,12 @@ namespace Basic
         }
         private static int fail_count = 0;
         private static int passing_grade = 60;
-        private static int num = 0;
 
         public static void Assignment3()
         
         {
-            for (int num = 1; num < 1001; num++);
+            for (int num = 1; num < 1001; num++)
+            {
             string i_str = $"{num}";
             if ((num % 15) == 0)
                 {Console.WriteLine("FizzBuzz");}
@@ -73,16 +73,50 @@ namespace Basic
 
             else
                 {Console.WriteLine(i_str);}
+            }
             
 
         }
 
         public static void Assignment4()
         {
-            /*
-             * Write code here
-             */
-        }
-    }
+        List<int> num_lst = new List<int>();
+        bool is_true = true;
+        string? first_input = Console.ReadLine(); // collecting console input
+        if (first_input == null)
+            {Console.Write("Invalid input, please enter an integer value");}
 
+        else
+            {
+                int first_val = Convert.ToInt32(first_input); // Converting to integer type
+                while (true)
+                {
+                    string? input;
+                    int val;
+                    Console.WriteLine("Please enter an integer value");
+                    input = Console.ReadLine(); // collecting console input
+                    if (input == null)
+                        {Console.Write("Invalid input, please enter an integer value");}
+
+                    else
+                    {
+                        val = Convert.ToInt32(input); // Converting to integer type
+                        if (val < 0)
+                            {break;}
+                        Console.WriteLine("You entered: {0}", input);
+                        if (is_true)
+                        {
+                            if (val % first_val != 0)
+                            {
+                                is_true=false;
+                            }
+                        }
+                    }
+                }
+                Console.WriteLine($"{is_true}");
+                
+            }
+        }
+
+    }
 }
