@@ -26,6 +26,8 @@ namespace Basic
 
             Console.WriteLine("please enter a grade: ");
             int currGrade = int.Parse(Console.ReadLine());
+            highestGrade= currGrade;
+            lowetGrade= currGrade;
 
             while (currGrade != STOP_INPUT)
             {
@@ -40,7 +42,7 @@ namespace Basic
                 {
                     highestGrade = currGrade;
                 }
-                if (lowetGrade > currGrade)
+                else if (lowetGrade > currGrade)
                 {
                     lowetGrade = currGrade;
                 }
