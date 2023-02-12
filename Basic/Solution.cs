@@ -93,16 +93,11 @@ namespace Basic
                 if (currInput % firstNumber != 0)
                 {
                     divides = false;
-                    Console.WriteLine(divides);
-                    break;
                 }
                 Console.WriteLine("Enter input to check: ");
                 currInput = int.Parse(Console.ReadLine());
             }
-            if (divides)
-            {
-                Console.WriteLine(divides);
-            }
+            Console.WriteLine(divides);
         }
     }
 }
