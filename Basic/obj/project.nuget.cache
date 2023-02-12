@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "puXETEOfXHuDgqzdbQ6/7fAPy+SyCTynHQug/+eISTL9PJju7PBPmIq001N2ahaTxYK1vjJGKJFw6CVeyziVsw==",
+  "dgSpecHash": "gzgX/KJEj/lGwvoZalX823XPYG5VimT8JZCpEX97lFhwmTkID7GpWYZMbPYmUgvH+HhO4YWFj0elTXhQMjzOIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj",
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\CSharp-Basic\\Basic\\Basic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

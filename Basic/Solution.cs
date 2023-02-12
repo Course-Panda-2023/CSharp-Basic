@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace Basic
@@ -17,23 +17,25 @@ namespace Basic
         public static void Assignment2()
         {
             const int FailedGrade = 60;
-            int sum = 0;
-            int maxGrade = 0;
-            int minGrade = 100;
-            int amountOfGrades = 0;
-            int amountOfFails = 0;
 
             Console.WriteLine("Please enter a grade: ");
             int num = Convert.ToInt32(Console.ReadLine());
+
+            int sum = 0;
+            int maxGrade = num;
+            int minGrade = num;
+            int amountOfGrades = 0;
+            int amountOfFails = 0;
+
             while (num != -1)
             {
                 sum += num;
                 amountOfGrades++;
                 if (maxGrade < num)
                     maxGrade = num;
-                if (minGrade > num)
+                else if (minGrade > num)
                     minGrade = num;
-                if(num < FailedGrade)
+                if (num < FailedGrade)
                     amountOfFails++;
 
                 Console.WriteLine("Please enter a grade: ");
