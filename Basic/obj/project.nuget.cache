@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7hj6LSXI5qfJd2ORVeVBXxreQGntHfhhsaJf35Xz+hRC1+i1c9C4WASCq9P/gxb8TacYn+mbFqfy9krTvMiQ0Q==",
+  "dgSpecHash": "5UyEVy307MYh6B0pkykc+8PRPNzqod6oN7qoc1HzLE2F8HjwqkwFFFcSesSUNGDN+8G6NEkt4Syczi5Ju1uXVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\Basic.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/ilanmotiei/Desktop/a/CSharp-Basic/Basic/Basic.csproj",
+  "expectedPackageFiles": [
+    "/Users/ilanmotiei/.nuget/packages/microsoft.netcore.app.ref/6.0.13/microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "/Users/ilanmotiei/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "/Users/ilanmotiei/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.13/microsoft.netcore.app.host.osx-arm64.6.0.13.nupkg.sha512"
+  ],
   "logs": []
 }
