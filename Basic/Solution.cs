@@ -21,60 +21,54 @@ namespace Basic
             double avg = 0;
             int numOfGrades = 0;
             int grade = 0;
-            while (grade != -1)
+            const int FAIL = 60;
+            do
             {
                 Console.WriteLine("enter grade, enter -1 to stop: ");
                 string gradeStr = Console.ReadLine();
                 grade = Convert.ToInt32(gradeStr);
-                if (grade < 60)
+                if(grade >= 0 && grade <= 100)
                 {
-                    fail += 1;
-                }
-                if (grade >= 0 && grade <= 100)
-                {
+                    if (grade < FAIL)
+                    {
+                        fail++;
+                    }
                     numOfGrades += 1;
                     avg += grade;
                     if (low > grade)
                     {
                         low = grade;
                     }
-                    else
+                    else if (high < grade)
                     {
-                        if (high < grade)
-                        {
-                            high = grade;
-                        }
+                        high = grade;
                     }
                 }
-                else
-                {
-                    Console.WriteLine("invalid grade ");
-                }
-
             }
+            while (grade != -1);
             if (numOfGrades != 0)
             {
-                avg = avg / numOfGrades;
+                avg /= numOfGrades;
             }
-            Console.WriteLine("avg: " + avg);
-            Console.WriteLine("low: " + low);
-            Console.WriteLine("high: " + high);
-            Console.WriteLine("fail: " + fail);
+            Console.WriteLine($"avg: {avg}, low: {low}, high: {high}, fail: {fail}");
         }
 
         public static void Assignment3()
         {
-            for (int i = 1; i <= 1000; i++)
+            int repeat = 1000;
+            int div1 = 3;
+            int div2 = 5;
+            for (int i = 1; i <= repeat; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                if (i % div1 == 0 && i % div2 == 0)
                 {
                     Console.WriteLine("FizzBuzz");
                 }
-                else if (i % 5 == 0)
+                else if (i % div2 == 0)
                 {
                     Console.WriteLine("Buzz");
                 }
-                else if (i % 3 == 0)
+                else if (i % div1 == 0)
                 {
                     Console.WriteLine("Fizz");
                 }
@@ -87,21 +81,21 @@ namespace Basic
 
         public static void Assignment4()
         {
-             int num= 0;
-        int numbers = 0;
-        Console.WriteLine("enter number");
-        string numString = Console.ReadLine();
-        num = Convert.ToInt32(numString);
-        bool flag = true;
-        while (numbers!=-1){
-            Console.WriteLine("enter number, enter -1 to stop: ");
-            numString = Console.ReadLine();
-            numbers = Convert.ToInt32(numString);
-            if(numbers%num!=0 && numbers!=-1){
-                flag=false;
+            int num= 0;
+            int numbers = 0;
+            Console.WriteLine("enter number");
+            string numString = Console.ReadLine();
+            num = Convert.ToInt32(numString);
+            bool flag = true;
+            while (numbers!=-1){
+                if(numbers%num!=0){
+                    flag=false;
+                }
+                Console.WriteLine("enter number, enter -1 to stop: ");
+                numString = Console.ReadLine();
+                numbers = Convert.ToInt32(numString);
             }
-        }
-        Console.WriteLine(flag);
+            Console.WriteLine(flag);
         }
     }
 }
