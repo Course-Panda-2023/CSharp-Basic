@@ -9,47 +9,50 @@
 
         public static void Assignment2()
         {
+            int max = Helper.Constants.minimumGrade;
+            int min = Helper.Constants.maximumGrade;
+            const int failure = Helper.Constants.failure;
+            int failGradesCount = 0;
+            int gradesSum = 0;
+            int gradesCount = 0;
             string input;
-            int number = 0;
-            int sum = 0;
-            int numbers = 0;
-            int max = int.MinValue;
-            int min = int.MaxValue;
-            int FAILURE = 60;
-            int count = 0;
-            Console.WriteLine("Enter numbers. Press -1 to exit");
-            while (number != -1)
+            int grade = 0;
+            string keyToStop = Helper.Constants.keyToStop;
+            Console.WriteLine("Enter grades. Press -1 to exit");
+
+            do
             {
                 input = Console.ReadLine();
-                if (input is not null)
+                grade = Convert.ToInt32(input);
+                if (!Helper.IsAValidGrade(grade)) continue;
+                gradesSum += grade;
+                if (grade > max)
                 {
-                    number = Convert.ToInt32(input);
-                    sum += number;
-                    ++numbers;
-                    if (number > max)
-                    {
-                        max = number;
-                    }
-                    if (number < min)
-                    {
-                        min = number;
-                    }
-                    if (number < FAILURE && number != -1)
-                    {
-                        ++count;
-                    }
+                    max = grade;
                 }
-            }
-            double avg = sum / numbers;
-            Console.WriteLine($"The average is {avg}, \nThe maximum is {max}\nThe minimum is {min}\nFailure count  {count}");
+                if (grade < min)
+                {
+                    min = grade;
+                }
+                if (grade < failure)
+                {
+                    ++failGradesCount;
+                }
+                ++gradesCount;
+            } while (!input.Equals(keyToStop));
+            double avg = (double) gradesSum / gradesCount;
+            Console.WriteLine($"The average is {avg}");
+            Console.WriteLine($"The maximum is {max}");
+            Console.WriteLine($"The minimum is {min}");
+            Console.WriteLine($"Failure count {failGradesCount}");
         }
 
         public static void Assignment3()
         {
-            const int MIN_RANGE = 0;
-            const int MAX_RANGE = 1000;
+            const int minRange = Helper.Constants.minRange;
+            const int maxRange = Helper.Constants.maxRange;
 
-            for (int i = MIN_RANGE; i < MAX_RANGE; ++i)
+            for (int i = minRange; i < maxRange; ++i)
             {
                 if (i % 3 == 0)
                 {
@@ -73,33 +76,31 @@
             string input;
             bool isAllDivided;
             int commonDivisor, number = 0;
+            
+            isAllDivided = true;
             Console.WriteLine("Enter a number that all be dived by this common divisor");
             input = Console.ReadLine();
-            if (input is null)
-            {
-                return;
-            }
-            isAllDivided = true;
             commonDivisor = Convert.ToInt32(input);
             number = 0;
             Console.WriteLine("Enter numbers. Press -1 to exit");
-            while (number != -1)
+
+            do
             {
                 input = Console.ReadLine();
-                
-                if (input is not null)
+                if (input is null) return;
+                number = Convert.ToInt32(input);
+                if (number == -1)
                 {
-                    number = Convert.ToInt32(input);
-                    if (number % commonDivisor != 0 && number != -1)
-                    {
-                        if (isAllDivided)
-                        {
-                            isAllDivided = false;
-                        }   
-                    }
+                    Console.WriteLine(isAllDivided);
+                    return;
                 }
-            }
-            Console.WriteLine(isAllDivided ? "true" : "false");
+                if (number % commonDivisor != 0)
+                {
+                    isAllDivided = false;
+                }
+            } while (true);
+
+            Console.WriteLine(isAllDivided);
         }
     }
 }
