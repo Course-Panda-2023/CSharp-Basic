@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "7hj6LSXI5qfJd2ORVeVBXxreQGntHfhhsaJf35Xz+hRC1+i1c9C4WASCq9P/gxb8TacYn+mbFqfy9krTvMiQ0Q==",
+  "dgSpecHash": "eOiCWt2lVYdWlk7iAqINRjjGV9Rhma3Mf2kjVlRNEk08CH5AnRV9YJ7MycTCywjf98LyAzEpwL9YWpxM9SgKBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\Basic.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\HILLEL\\CSharpeProjects\\CSharp-Basic\\Basic\\Basic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HILLEL\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\HILLEL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\HILLEL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\HILLEL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512"
+  ],
   "logs": []
 }
