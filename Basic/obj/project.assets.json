@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\shimo\\.nuget\\packages\\": {}
+    "C:\\Users\\AssafHillel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\Basic.csproj",
+      "projectUniqueName": "C:\\Users\\AssafHillel\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj",
       "projectName": "Basic",
-      "projectPath": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\Basic.csproj",
-      "packagesPath": "C:\\Users\\shimo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shimo\\source\\repos\\CSharp-Basic\\Basic\\Basic\\obj\\",
+      "projectPath": "C:\\Users\\AssafHillel\\Source\\Repos\\CSharp-Basic\\Basic\\Basic.csproj",
+      "packagesPath": "C:\\Users\\AssafHillel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AssafHillel\\Source\\Repos\\CSharp-Basic\\Basic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AssafHillel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
